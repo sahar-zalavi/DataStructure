@@ -12,6 +12,22 @@ public class Card { // Defines the Card class.
         this.rank = random.nextInt(Card.ranks.length); // Picks a rank position from 0 to 12.
         this.suit = random.nextInt(Card.suits.length); // Picks a suit position from 0 to 3.
     }
+    public Card(int rank, int suit) { // Makes a card using the given rank and suit.
+        this.rank = rank; // Saves the rank in this card.
+        this.suit = suit; // Saves the suit in this card.
+    }
+
+    public int getRankValue() { // Gets the card's rank position.
+        return this.rank; // Gives back a number from 0 to 12.
+    }
+
+    public String getColor() {
+        if (this.getSuit().equals("Diamonds") || this.getSuit().equals("Hearts")) {
+            return "Red"; // Diamonds and Hearts.
+        } else {
+            return "Black"; // Clubs and Spades.
+        }
+    }
 
     public String getRank() { // Gets the rank name.
         return Card.ranks[this.rank]; // Returns a name such as "King".
