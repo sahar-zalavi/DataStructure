@@ -1,5 +1,5 @@
 public class CardTest { // Defines the CardTest class.
-    public static void main(String[] args) { // Starts the program.
+    static void main(String[] args) { // Starts the program.
 
         /*Card card1 = new Card(); // Creates the first card.
         Card card2 = new Card(); // Creates the second card.
@@ -10,7 +10,7 @@ public class CardTest { // Defines the CardTest class.
         } else { // Runs if card1 is not bigger.
             System.out.println(card2); // Prints card2 first.
             System.out.println(card1); // Prints card1 second.
-        }*/
+        }
 
         Deck deck = new Deck(); // Makes a pack of cards.
 
@@ -21,5 +21,21 @@ public class CardTest { // Defines the CardTest class.
         System.out.println(deck.deal());
 
         System.out.println(deck);
-    } // Ends the main method.
-} // Ends the class.
+    } // Ends the main method.*/
+
+        Card card1 = new Card();
+        Card card2 = new Card();
+
+        System.out.println("Card 1 is the " + card1);
+        System.out.println("Card 2 is the " + card2);
+        if (card1.compareTo(card2) > 0) {
+            System.out.println("Card 1 is bigger.");
+        } else if (card1.compareTo(card2) < 0){
+
+            System.out.println("Card 2 is bigger.");
+        } else {
+            System.out.println("Card 1 and Card 2 are equal.");
+        }
+    }
+
+}
